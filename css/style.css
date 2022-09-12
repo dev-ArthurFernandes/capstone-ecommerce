@@ -1,0 +1,145 @@
+body{
+    width: 100%;
+    background: url('/img/backgaround.png') no-repeat ;
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+.cabecalho{
+    width: 100%;
+    height: 60px;    
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.288);
+    box-shadow: -10px -10px 20px black;
+    background-color: #ffffff;
+}
+
+.cabecalho #logo{
+    width: 220px;
+    height: 100px;
+    margin-top: -15px;
+    margin-left: 20px;
+}
+
+.cabecalho #logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.cabecalho nav{
+    width:75%;
+    height: 100%;
+}
+
+.cabecalho nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.direita{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.direita button {
+    width: 80px;
+    margin: auto;
+    border: none;
+    border-radius: 3px;
+    background-color: #37268C;
+    color: white;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 600px auto 0 auto;
+    background-color: white;
+}
+
+main .produtos{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 0 auto;
+}
+
+.produtos ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.produtos ul li{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.397);
+    margin: 0 10px 0 10px;
+}
+.produtos ul li .img{
+    width: 100%;
+    height: 140px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.produtos ul li .tag{
+    height: 17px;
+    font-family: 'inter', sans-serif;
+    font-size: 12pt;
+    color: #ffffff;
+    text-align: center;
+    margin: 5px 0 5px 10px;
+    background-color: #2E245E;
+}
+
+.produtos ul li h3{
+    width: 100%;
+    height: 20px;
+    margin: 5px 0 10px 10px;
+    font-size: 17pt;
+    word-wrap: break-word; 
+    word-break: break-all;
+}
+
+.produtos ul li .description{
+    width: 100%;
+    height: 100px;
+    word-wrap: break-word; 
+    word-break: break-all;
+    margin-left: 5px;
+}
+
+.produtos ul li .price{
+    margin: 0 0 5px 10px;
+}
+
+.produtos ul li button{
+    border: none;
+    border-radius: 2px;
+    background-color: #37268C;
+    color: #ffffff;
+}
