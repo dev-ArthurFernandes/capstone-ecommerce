@@ -28,7 +28,62 @@
         <div class="direita"><button class="login">login</button>|<button class="registrar">registrar</button></div>
     </header>
     <main>
-        <section class="produtos"></sectiona>
+        <section class="produtos"></section>
+        <aside class="aside">
+
+            <div class="search"><input type="text" placeholder="Digite aqui sua pesquisa"><button>Pesquisar</button></div>
+
+            <div class="shopCart">
+                <h2>Carrinho de compras</h2>
+                <div class="listItem">
+                    <ul>
+                        <li id="1">
+                            <div class="imgCart">
+                                <img src="../img/jaqueta.svg" alt="Lightweight Jacket">
+                            </div>
+                            <div class="itemInfo">
+                                <span class="tag">Jaqueta</span>
+                                <span>
+                                    <h3><strong>Lightweight Jacket</strong></h3>
+                                </span>
+                                <span>
+                                    <p class="price">R$ 100</p>
+                                </span>
+                            </div>
+                            <div class="butoes">
+                                <button class="but_+">+</button>
+                                <input class="itemContador" value="0"></input>
+                                <button class="but_-">-</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cartInfo">
+                    <span><p>Quantidade:</p><input type="text" readonly value="0"></span>
+                    <span><p>Total:</p><input type="text" readonly value="R$ 0,00"></span>
+                </div>
+            </div>
+        </aside>
     </main>
 </body>
 </html>
+
+<!-- <li id="1">
+    <div class="imgCart">
+        <img src="../img/jaqueta.svg" alt="Lightweight Jacket">
+    </div>
+    <div class="itemInfo">
+        <span class="tag" style="width: 99px;">Camisetas</span>
+        <span>
+            <h3><strong>Lightweight Jacket</strong></h3>
+        </span>
+        <span>
+            <p class="price">R$ 100</p>
+        </span>
+    </div>
+    <div class="butoes">
+        <button class="but_+">+</button>
+        <input class="itemContador" value="0"></input>
+        <button class="but_-">-</button>
+    </div>
+</li> -->

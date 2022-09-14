@@ -1,3 +1,5 @@
+/* Configurações gerais */
+
 body{
     width: 100%;
     background: url('/img/backgaround.png') no-repeat ;
@@ -5,13 +7,12 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-
-
 body a{
     text-decoration: none;
     color: black;
 }
 
+/* Configurações do cabeçalho */
 .cabecalho{
     width: 100%;
     height: 60px;    
@@ -23,6 +24,7 @@ body a{
     background-color: #ffffff;
 }
 
+/* Logo do cabeçalho */
 .cabecalho #logo{
     width: 220px;
     height: 100px;
@@ -35,6 +37,7 @@ body a{
     height: 100%;
 }
 
+/* Menu de navegação do cabeçalho */
 .cabecalho nav{
     width:75%;
     height: 100%;
@@ -48,6 +51,7 @@ body a{
     justify-content: space-evenly;
 }
 
+/* Butões a direita do cabeçalho */
 .direita{
     width: 10%;
     height: 100%;
@@ -66,6 +70,7 @@ body a{
     color: white;
 }
 
+/* Configurações do conteúdo príncipal */
 main{
     width: 100%;
     height: 100%;
@@ -76,65 +81,80 @@ main{
     background-color: white;
 }
 
+/* Seção dos produtos */
 main .produtos{
     width: 1200px;
     height: 100%;
     display: flex;
     justify-content: center;
     margin: 100px auto 0 auto;
+    float: left;
 }
 
 .produtos ul{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .produtos ul li{
-    width: 300px;
+    width: 310px;
     height: 350px;
-    display: flex;
-    flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.349);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.397);
-    margin: 0 10px 0 10px;
+    margin: 10px
 }
 .produtos ul li .img{
     width: 100%;
     height: 140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 0 0 10px 0;
 }
 
 .produtos ul li .tag{
-    height: 17px;
     font-family: 'inter', sans-serif;
     font-size: 12pt;
     color: #ffffff;
     text-align: center;
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 10px 10px;
     background-color: #2E245E;
 }
 
 .produtos ul li h3{
     width: 100%;
     height: 20px;
-    margin: 5px 0 10px 10px;
-    font-size: 17pt;
+    margin: 5px 0 10px 5px;
+    font-size: 15pt;
     word-wrap: break-word; 
     word-break: break-all;
+    font-family: 'inter', sans-serif bold;
 }
 
 .produtos ul li .description{
-    width: 100%;
-    height: 100px;
-    word-wrap: break-word; 
-    word-break: break-all;
+    width: 98%;
+    height: 70px; 
     margin-left: 5px;
+    font-size: 13pt;
+    word-wrap: break-word;
 }
 
 .produtos ul li .price{
-    margin: 0 0 5px 10px;
+    margin: 0 0 0 10px;
+    color: #37268C;
+    margin: 0 0 10px 5px;
 }
 
 .produtos ul li button{
@@ -142,4 +162,153 @@ main .produtos{
     border-radius: 2px;
     background-color: #37268C;
     color: #ffffff;
+    cursor: pointer;
+    width: 200px;
+    font-size: 13pt;
+    margin: 0 0 0 10px;
+}
+
+/* Configurações do conteúdo a direita */
+.aside{
+    float: right;
+    width: 500px;
+    height: 500px;
+    margin: 100px 100px auto auto;
+}
+
+/* Configuração da barra de pesquisa */
+.aside .search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border: 0.1px solid rgba(126, 126, 126, 0.425);
+    border-radius: 5px;
+}
+
+.aside .search input{
+    width: 75%;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.aside .search button{
+    width: 25%;
+    border: none;
+    background-color: #37268C;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Configuração do Carrinho de compras */
+.aside .shopCart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.aside .shopCart h2{
+    text-align: center;
+    height: 40px;
+    font-size: 20pt;
+    margin-top: 10px;
+    background-color: #37268C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Configuração da lista de itens do carrinho */
+.aside .shopCart .listItem{
+    width: 99.6%;
+    height: 310px;
+    overflow-x: auto;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: #F5F5F5;
+}
+
+.aside .shopCart .listItem ul{
+    width: 100%;
+}
+
+.aside .shopCart .listItem ul li{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 10px;
+    border: 1px solid rgba(122, 122, 122, 0.534);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(124, 124, 124, 0.616);
+    background-color: #ffff;
+}
+
+.aside .shopCart .listItem ul li .itemInfo{
+    width: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside .shopCart .listItem ul li .tag{
+    width: 100%;
+    font-size: 15pt;
+    margin-bottom: 5px ;
+}
+
+.aside .shopCart .listItem ul li .price{
+    color: #37268C;
+    margin-top: 5px;
+}
+
+.aside .shopCart .listItem ul li .butoes{ /* Div que contem os butões */
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside .shopCart .listItem ul li .butoes button{ /* Butões + e - */
+    width: 30px;
+    height: 22px;
+    font-size: 12pt;
+    border: 1px solid rgba(114, 114, 114, 0.5);
+    background-color: #ffff;
+}
+
+.aside .shopCart .listItem ul li .butoes input{ /* Quantidade de produtos */
+    width: 20px;
+    height: 18px;
+    text-align: center;
+    border: 1px solid rgba(114, 114, 114, 0.5);
+    background-color: #ffff;
+    color: #2E245E;
+}
+
+.aside .shopCart .cartInfo{
+    width: 100%;
+    height: 80px;
+    background-color: #333333;
+}
+
+.aside .shopCart .cartInfo span{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 10px;
+    color: #ffff;
+}
+
+.aside .shopCart .cartInfo input{
+    width: 70px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: #ffff;
+    font-size: 13pt;
 }
