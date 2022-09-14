@@ -2,6 +2,8 @@
 // Criação dos produtos na Tela
 let section = document.querySelector('.produtos')
 
+let carrinhoVazio = document.getElementById('vazio')
+
 function addCard(data){
     
     let tagUl = document.createElement('ul')
@@ -52,15 +54,15 @@ function makeCards(item){
     tagLi.classList         = 'produto'
 
     butao.addEventListener('click', () => {
-        let tagLi       = document.createElement('li')
-        let divImg      = document.createElement('div')
-        let imagem      = document.createElement('img')
-        let itemInfo    = document.createElement('div')
-        let tag         = document.createElement('span')
-        let spanName    = document.createElement('span')
-        let name        = document.createElement('h3')
 
-        console.log(productId)
+        carrinhoVazio.remove()
+
+        let tagLi       = document.createElement('li')
+        let itemInfo    = document.createElement('div')
+        let spanName    = document.createElement('span')
+        
+
+        console.log(carrinhoVazio)
     })
 
     tagDiv.appendChild(imagem)
@@ -72,4 +74,4 @@ addCard(data)
 
 section.appendChild(addCard(data))
 
-
+let cartShop = []
