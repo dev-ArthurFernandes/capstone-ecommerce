@@ -307,7 +307,6 @@ main .produtos{
     overflow-x: auto;
     border: 1px solid rgb(124, 124, 124);
     background-color: #F5F5F5;
-    background: url('/img/carrinhoVazio.png');
 }
 
 .aside .shopCart .listItem ul{
@@ -319,7 +318,7 @@ main .produtos{
     width: 95%;
     display: flex;
     align-items: center;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 10px 10px;
     border: 1px solid rgba(122, 122, 122, 0.534);
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(124, 124, 124, 0.616);

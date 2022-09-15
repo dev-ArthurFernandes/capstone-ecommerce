@@ -70,7 +70,12 @@ function makeCards(item){
 }
 
 function addToCart(){
-
+    console.log(event)
+    for(item in cartShopList){
+        if(item.id === event['path']['1'].id){
+            
+        }
+    }
     carrinhoVazio.style = "background-image: none"
 
     cartShopList.push(event['path'][1].id - 1)
@@ -113,7 +118,7 @@ function addToCart(){
     price.innerHTML         = `R$ ${productValue}`
     divButao.className      = 'butoes'
     bntMais.className       = 'but_+'
-    itemContador.className  = 'itemContador'
+    itemContador.id         = `item${productId}Contador`
     itemContador.value      = 1
     bntMenos.className      = 'but_-'
     bntMais.innerHTML       = '+'
@@ -146,13 +151,14 @@ function calculatePrice(){
 }
 
 function calculateQuantity(event){
+    console.log(event)
     if(event['path'][0].className === "but_+"){
         let produto = data[event['path'][2].id - 1]
 
         let price = produto.value
 
-        let input = document.querySelector('.itemContador')
-        
+        let input = document.querySelector(`#item${produto.id}Contador`)
+        console.log(input)
         input.value = parseInt(input.value) + 1
 
         PrecoTotal += price
@@ -167,33 +173,33 @@ function calculateQuantity(event){
 
         let price = produto.value
 
-        let input = document.querySelector('.itemContador')
+        let input = document.querySelector(`#item${produto.id}Contador`)
         
         input.value = parseInt(input.value) - 1
 
         PrecoTotal -= price
-
-        if(cartShopList.length > 1){
-            cartShopList.splice(0,1)
-            console.log(cartShopList)
-            quantidade.value = cartShopList.length
-        }else{
-            cartShopList.splice(0,1)
-            quantidade.value = 0
-        }
         
+        cartShopList.splice(0,1)
+        quantidade.value = cartShopList.length
+        // if(input.value === "0"){
+
+        // }
     }
-    removeProduct(event)
+   removeProduct(event)
     calculatePrice()
 }
 
 function removeProduct(event){
     
-    let quantidade = document.querySelector('.itemContador').value
+    let quantidade = document.querySelector(`#item${data[event['path'][2].id - 1].id}Contador`).value
 
     if(quantidade === "0"){
         event['path'][2].remove()
-        cartShop.append(carrinhoVazio)
+    }else{
+        return false
+    }
+    if(cartShopList.length === 0){
+        carrinhoVazio.style = "background-image: url('/img/carrinhoVazio.png');"
     }else{
         return false
     }
