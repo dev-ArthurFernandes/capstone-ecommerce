@@ -1,15 +1,29 @@
-/* Configurações gerais */
+:root{
+    --cor-Primaria: #2E245E;
+    --cor-Segundaria: #37268C;
+    --Grey-100: #333333;
+    --Grey-50: #828282;
+}
 
+
+/* Configurações gerais */
 body{
     width: 100%;
     background: url('/img/backgaround.png') no-repeat ;
     position: absolute;
     font-family: 'Inter', sans-serif;
+    cursor: auto;
 }
 
 body a{
     text-decoration: none;
     color: black;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #2E245E;
+    font-size: 18pt;
 }
 
 /* Configurações do cabeçalho */
@@ -49,7 +63,35 @@ body a{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
+
+.cabecalho nav ul li{
+    display: inline;
+}
+
+/* Sub-Menu */
+.cabecalho nav ul ul{
+    width: 300px;
+    display: none;
+    position: absolute;
+    background-color: #ffff;
+    margin: 0 0 0 -100px;
+}
+
+.cabecalho nav ul li{
+    transition: 3s;
+}
+.cabecalho nav ul li:hover ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cabecalho nav ul li ul li a{
+    display: inline;
+}
+
 
 /* Butões a direita do cabeçalho */
 .direita{
@@ -66,8 +108,16 @@ body a{
     margin: auto;
     border: none;
     border-radius: 3px;
-    background-color: #37268C;
+    background-color: var(--cor-Segundaria);
     color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.direita button:hover{
+    background-color: #ffff;
+    color: var(--cor-Segundaria);
+    border: 1px solid var(--Grey-50);
 }
 
 /* Configurações do conteúdo príncipal */
@@ -87,8 +137,20 @@ main .produtos{
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 100px auto 0 auto;
     float: left;
+}
+
+.produtos h2{
+    width: 150px;
+    height: 100px;
+    font-size: 20pt;
+    margin: -50px 0 20px 90px;
+    border-radius: 3px 0 0 0;
+    border-top: 0.1px solid #333333;
+    border-left: 0.1px solid #333333;
+    padding: 10px 0 0 10px ;
 }
 
 .produtos ul{
@@ -100,6 +162,7 @@ main .produtos{
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin-top: -90px;
 }
 
 .produtos ul li{
@@ -130,7 +193,8 @@ main .produtos{
     color: #ffffff;
     text-align: center;
     margin: 5px 0 10px 10px;
-    background-color: #2E245E;
+    box-shadow: 1px 1px 1px var(--Grey-50);
+    background-color: var(--cor-Primaria);
 }
 
 .produtos ul li h3{
@@ -153,26 +217,33 @@ main .produtos{
 
 .produtos ul li .price{
     margin: 0 0 0 10px;
-    color: #37268C;
+    color: var(--cor-Segundaria);
     margin: 0 0 10px 5px;
 }
 
 .produtos ul li button{
     border: none;
     border-radius: 2px;
-    background-color: #37268C;
+    background-color: var(--cor-Segundaria);
     color: #ffffff;
     cursor: pointer;
     width: 200px;
     font-size: 13pt;
     margin: 0 0 0 10px;
+    transition: 300ms;
+}
+
+.produtos ul li button:hover{
+    background-color: #ffff;
+    color: var(--cor-Segundaria);
+    border: 1px solid #333333;
 }
 
 /* Configurações do conteúdo a direita */
 .aside{
     float: right;
     width: 500px;
-    height: 500px;
+    max-height: 600px;
     margin: 100px 100px auto auto;
 }
 
@@ -190,17 +261,23 @@ main .produtos{
     background-color: #F5F5F5;
     border: none;
     border-radius: 5px 0 0 5px;
+    outline: none;
 }
 
 .aside .search button{
     width: 25%;
     border: none;
-    background-color: #37268C;
+    background-color: var(--cor-Segundaria);
     color: white;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+    transition: 300ms;
 }
-
+.aside .search button:hover{
+    background-color: white;
+    color: var(--cor-Segundaria);
+    border-left: 1px solid rgba(126, 126, 126, 0.425);
+}
 /* Configuração do Carrinho de compras */
 .aside .shopCart{
     width: 100%;
@@ -215,7 +292,7 @@ main .produtos{
     height: 40px;
     font-size: 20pt;
     margin-top: 10px;
-    background-color: #37268C;
+    background-color: var(--cor-Segundaria);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,14 +302,17 @@ main .produtos{
 /* Configuração da lista de itens do carrinho */
 .aside .shopCart .listItem{
     width: 99.6%;
-    height: 310px;
+    min-height: 300px;
+    max-height: 510px;
     overflow-x: auto;
     border: 1px solid rgb(124, 124, 124);
     background-color: #F5F5F5;
+    background: url('/img/carrinhoVazio.png');
 }
 
 .aside .shopCart .listItem ul{
     width: 100%;
+
 }
 
 .aside .shopCart .listItem ul li{
@@ -257,11 +337,11 @@ main .produtos{
 .aside .shopCart .listItem ul li .tag{
     width: 100%;
     font-size: 15pt;
-    margin-bottom: 5px ;
+    margin-bottom: 5px;
 }
 
 .aside .shopCart .listItem ul li .price{
-    color: #37268C;
+    color: var(--cor-Segundaria);
     margin-top: 5px;
 }
 
@@ -279,6 +359,7 @@ main .produtos{
     font-size: 12pt;
     border: 1px solid rgba(114, 114, 114, 0.5);
     background-color: #ffff;
+    cursor: pointer;
 }
 
 .aside .shopCart .listItem ul li .butoes input{ /* Quantidade de produtos */
@@ -287,7 +368,7 @@ main .produtos{
     text-align: center;
     border: 1px solid rgba(114, 114, 114, 0.5);
     background-color: #ffff;
-    color: #2E245E;
+    color: var(--cor-Primaria);
 }
 
 .aside .shopCart .cartInfo{
@@ -311,4 +392,6 @@ main .produtos{
     background: none;
     color: #ffff;
     font-size: 13pt;
+    outline: none;
+    cursor: auto;
 }
